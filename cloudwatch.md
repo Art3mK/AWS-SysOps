@@ -4,6 +4,14 @@
 - CloudWatch stores metrics for terminated Amazon EC2 instances or deleted Elastic Load Balancers for 15 months.
 - Alarm history is available for 14 days
 
+## putting metrics
+
+- Each metric data point must be marked with a time stamp. The time stamp can be up to two weeks in the past and up to two hours into the future. If you do not provide a time stamp, CloudWatch creates a time stamp for you based on the time the data point was received.
+- Metrics exist only in the region in which they are created. Metrics cannot be deleted, but they automatically expire after 15 months if no new data is published to them. Data points older than 15 months expire on a rolling basis; as new data points come in, data older than 15 months is dropped.
+- `PutMetricData` or `aws cloudwatch put-metric-data`
+- `aws cloudwatch put-metric-data --metric-name Buffers --namespace MyNameSpace --unit Bytes --value 231434333 --dimensions InstanceId=1-23456789,InstanceType=m1.small`
+- `aws cloudwatch put-metric-data --metric-name PageViewCount --namespace MyService --value 2 --timestamp 2016-10-20T12:00:00.000Z`
+
 ## EC2
 
 *no* RAM monitoring by default
@@ -74,3 +82,7 @@ performance monitoring
 * Data points with a period of 3600 seconds (1 hour) are available for 455 days (15 months)
 
 You can retrieve data from any terminated EC2 or ELB
+
+## Alarms
+
+
