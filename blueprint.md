@@ -14,5 +14,6 @@ AWS Cloud Computing Whitepapers aws.amazon.com/whitepapers:
 
 ## Links
 
-https://aws.amazon.com/certification/certified-sysops-admin-associate/
-http://awstrainingandcertification.s3.amazonaws.com/production/AWS_certified_sysops_associate_blueprint.pdf
+- https://aws.amazon.com/certification/certified-sysops-admin-associate/
+- http://awstrainingandcertification.s3.amazonaws.com/production/AWS_certified_sysops_associate_blueprint.pdf
+- http://jayendrapatil.com/aws-sysops-administrator-associate-exam-learning-path/
